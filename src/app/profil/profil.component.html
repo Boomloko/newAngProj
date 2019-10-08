@@ -1,0 +1,13 @@
+<div>
+    <p><img [src]="User.photo" [alt]="User.name"/></p>
+</div>
+<div>
+    <p>name : {{User.name}}</p>
+    <p>firstname : {{User.firstName}}</p>
+    <p *ngIf="show">age : {{User.age}}</p>
+</div>
+<div>
+    <p>{{User.quote}}</p>
+    <input [(ngModel)]="User.quote">
+</div>
+<button (click)="displayHyde()">Affiche/masque ton age</button>
