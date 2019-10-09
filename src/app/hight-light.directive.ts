@@ -15,12 +15,12 @@ export class HightLightDirective implements OnInit{
   ngOnInit(){
     
   }
-  @HostListener('mouseenter') mouseEnterEvent (eventData:Event) {
+  @HostListener('mouseenter') mouseEnterEvent () {
     // this.myFontSize = '2rem';
     // this.myColor = 'blue';
     this.classes = 'light';
   }
-  @HostListener('mouseleave') mouseLeaveEvent (eventData:Event) {
+  @HostListener('mouseleave') mouseLeaveEvent () {
     // this.myFontSize = '1rem';
     // this.myColor = 'black';
     this.classes = 'removeClass';
