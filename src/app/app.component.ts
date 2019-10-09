@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  retour : string;
   title = 'Fiche de contact';
+
+  detectChild(){
+    return this.retour ="42";
+  }
 }
