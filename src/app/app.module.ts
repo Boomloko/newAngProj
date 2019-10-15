@@ -10,6 +10,9 @@ import { BestFilmsComponent } from './best-films/best-films.component';
 import { HightLightDirective } from './hight-light.directive';
 import { DisplayFilmsDirective } from './display-films.directive';
 import { ArticleComponent } from './article/article.component';
+import { MenuComponent } from './menu/menu.component';
+import { ROUTES } from './app.route';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -20,12 +23,14 @@ import { ArticleComponent } from './article/article.component';
     BestFilmsComponent,
     HightLightDirective,
     DisplayFilmsDirective,
-    ArticleComponent
+    ArticleComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(ROUTES)
   ],
   providers: [],
   bootstrap: [AppComponent]

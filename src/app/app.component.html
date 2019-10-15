@@ -1,7 +1,9 @@
-<app-profil></app-profil>
+
+<app-menu></app-menu>
 <app-enter (clickTrigger)="detectChild()"></app-enter>
 <hr>
 <app-display [display]="retour"></app-display>
-<app-best-films></app-best-films>
+
+<router-outlet></router-outlet>
 -------------------------------------------------------------
 <app-article [article]="item"  *ngFor="let item of filmsArray"></app-article>
