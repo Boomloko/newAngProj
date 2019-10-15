@@ -17,10 +17,8 @@ export class ProfilComponent implements OnInit {
   };
   constructor() { }
   
-  ngOnInit() {
-    
-  }
-  displayHyde(){
-    this.show = !this.show
+  ngOnInit() { }
+  displayHyde() {
+    this.show = !this.show;
   }
 }
