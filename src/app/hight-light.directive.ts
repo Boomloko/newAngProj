@@ -7,7 +7,7 @@ export class HightLightDirective implements OnInit{
 
   // @HostBinding('style.color') myColor: string;
   // @HostBinding('style.fontSize') myFontSize: string;
-
+  
   @HostBinding('class') classes = 'light';
 
   constructor() { }

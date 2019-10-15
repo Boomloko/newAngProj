@@ -1,0 +1,6 @@
+<p>{{article.title | uppercase}}</p>
+<img [src]="article.image">
+<p>{{article.description}}</p>
+<div>{{article.comment}}</div>
+<input [(ngModel)]="newComment"  type="text">
+<button  (click)="sendComment()">Send!</button>

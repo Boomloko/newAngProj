@@ -9,6 +9,7 @@ import { EnterComponent } from './enter/enter.component';
 import { BestFilmsComponent } from './best-films/best-films.component';
 import { HightLightDirective } from './hight-light.directive';
 import { DisplayFilmsDirective } from './display-films.directive';
+import { ArticleComponent } from './article/article.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { DisplayFilmsDirective } from './display-films.directive';
     EnterComponent,
     BestFilmsComponent,
     HightLightDirective,
-    DisplayFilmsDirective
+    DisplayFilmsDirective,
+    ArticleComponent
   ],
   imports: [
     BrowserModule,
