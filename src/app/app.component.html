@@ -1,9 +1,12 @@
 
 <app-menu></app-menu>
+<hr>
 <app-enter (clickTrigger)="detectChild()"></app-enter>
 <hr>
 <app-display [display]="retour"></app-display>
-
+<hr>
 <router-outlet></router-outlet>
--------------------------------------------------------------
+<hr>
 <app-article [article]="item"  *ngFor="let item of filmsArray"></app-article>
+<hr>
+<app-sign-up></app-sign-up>

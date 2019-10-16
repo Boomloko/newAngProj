@@ -13,6 +13,7 @@ import { ArticleComponent } from './article/article.component';
 import { MenuComponent } from './menu/menu.component';
 import { ROUTES } from './app.route';
 import { RouterModule } from '@angular/router';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { RouterModule } from '@angular/router';
     HightLightDirective,
     DisplayFilmsDirective,
     ArticleComponent,
-    MenuComponent
+    MenuComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,
