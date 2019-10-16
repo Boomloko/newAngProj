@@ -1,12 +1,22 @@
 
-<form (ngSubmit)="onSubmit()">
-    <div>
-      <label for="user">User</label>
-      <input name="user" type="text" [(ngModel)]="model.user" required minlength="4" maxlength="25">
-    </div>
-    <div>
-      <label for="email">Email</label>
-      <input name="email" type="number" [(ngModel)]="model.email" required email>
-    </div>
-    <button type="submit">Valider</button>
-  </form>
+<form (ngSubmit)="myForm.valid && onSubmit()" #myForm="ngForm">
+  <div>
+    <label for="user">User</label>
+    <input name="user" type="text" [(ngModel)]="model.user" #user="ngModel" required minlength="4" maxlength="25">
+  </div>
+  <div *ngIf="user.errors && myForm.submitted">
+
+    <span *ngIf="user.errors.required">Le champs user est invalide</span>
+    <span *ngIf="user.errors.minlength">Le champ user doit dépasser 4 caractères</span>
+    <span *ngIf="user.errors.maxlength">Le champ user ne doit pas dépasser 25 caractères</span>
+  </div>
+  <div>
+    <label for="email">Email</label>
+    <input name="email" type="text" [(ngModel)]="model.email" #email="ngModel" required email>
+  </div>
+  <div *ngIf="email.errors && myForm.submitted">
+    <span *ngIf="email.errors.required">Le champs email est invalide</span>
+  </div>
+  <button type="submit">Valider</button>
+</form>
+

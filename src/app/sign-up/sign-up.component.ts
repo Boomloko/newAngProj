@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../user';
 
 
 @Component({
@@ -7,15 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sign-up.component.scss']
 })
 
-
-
-export class Order {
-  user: string;
-  email: string;
-
-}
 export class SignUpComponent implements OnInit {
-  model: Order = new Order();
+  model: User = new User();
 
   constructor() { }
 
