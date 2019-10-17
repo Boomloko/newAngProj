@@ -1,0 +1,17 @@
+<form (submit)="myForm.valid && send" #myForm="ngForm">
+    <div>
+        <label for="email">Email</label>
+        <input name="email" type="email" [(ngModel)]="model.email" #email="ngModel" required email>
+    </div>
+    <div *ngIf="emailRef?.errors?.email && myForm.submitted">
+        Wrong email silly boy! 
+    </div>
+    <div>
+        <label for="password">Password</label>
+        <input name="password" type="text" [(ngModel)]="model.password" #password="ngModel" required minlength="6">
+    </div>
+    <div *ngIf="passwordRef?.errors?.password && myForm.submitted">
+        Password invalid dumb!
+    </div>
+    <button type="submit">Give me that, bro !</button>
+</form>

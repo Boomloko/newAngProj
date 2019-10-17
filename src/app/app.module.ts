@@ -14,6 +14,7 @@ import { MenuComponent } from './menu/menu.component';
 import { ROUTES } from './app.route';
 import { RouterModule } from '@angular/router';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { LoginFormComponent } from './login-form/login-form.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     DisplayFilmsDirective,
     ArticleComponent,
     MenuComponent,
-    SignUpComponent
+    SignUpComponent,
+    LoginFormComponent
   ],
   imports: [
     BrowserModule,
