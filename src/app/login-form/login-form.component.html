@@ -1,17 +1,20 @@
-<form (submit)="myForm.valid && send" #myForm="ngForm">
+<form (submit)="myForm.valid && onSubmit()" #myForm="ngForm">
     <div>
         <label for="email">Email</label>
-        <input name="email" type="email" [(ngModel)]="model.email" #email="ngModel" required email>
+        <input name="email" type="email" [(ngModel)]="model.email" #emailRef="ngModel" email required >
     </div>
     <div *ngIf="emailRef?.errors?.email && myForm.submitted">
         Wrong email silly boy! 
     </div>
     <div>
         <label for="password">Password</label>
-        <input name="password" type="text" [(ngModel)]="model.password" #password="ngModel" required minlength="6">
+        <input name="password" type="text" [(ngModel)]="model.password" #passwordRef="ngModel" required minlength="6">
     </div>
-    <div *ngIf="passwordRef?.errors?.password && myForm.submitted">
+    <div *ngIf="passwordRef?.errors?.required && myForm.submitted">
         Password invalid dumb!
+    </div>
+    <div *ngIf="passwordRef?.errors?.minlength && myForm.submitted">
+        Too short!
     </div>
     <button type="submit">Give me that, bro !</button>
 </form>
